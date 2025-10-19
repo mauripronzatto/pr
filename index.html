@@ -1,0 +1,38 @@
+<html>
+<head>
+  <title>Ejercicio 01 - Arrays</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="card">
+  <h2>Ejercicio 01: Recorrer un array con For y While</h2>
+
+  <div id="resultado" class="resultado">Haz clic en "Ejecutar" para mostrar el recorrido.</div>
+  <button class="btn" id="btnEjecutar">Ejecutar Ejercicio</button>
+
+  <footer>Ejercicio 01 · Arrays en JavaScript</footer>
+
+  <script>
+    const numeros = [15, 8, 23, 42, 7, 99, 14, 33, 50, 61];
+
+    function ejecutar() {
+      let salida = "Recorrido con FOR:\n";
+      for (let i = 0; i < numeros.length; i++) {
+        salida += `Índice ${i}: ${numeros[i]}\n`;
+      }
+
+      salida += "\nRecorrido con WHILE:\n";
+      let i = 0;
+      while (i < numeros.length) {
+        salida += `Índice ${i}: ${numeros[i]}\n`;
+        i++;
+      }
+
+      document.getElementById("resultado").innerText = salida;
+    }
+
+    document.getElementById("btnEjecutar").onclick = ejecutar;
+  </script>
+</div>
+</body>
+</html>
